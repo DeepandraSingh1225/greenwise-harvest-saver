@@ -1,6 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, X, Minimize2, Maximize2, Robot, User } from 'lucide-react';
+import { Send, X, Minimize2, Maximize2, Bot, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -97,7 +97,7 @@ const Chatbot = () => {
           onClick={toggleChatbot}
           className="rounded-full h-14 w-14 shadow-lg bg-primary hover:bg-primary/90 text-white"
         >
-          <Robot size={24} />
+          <Bot size={24} />
         </Button>
       )}
       
@@ -112,7 +112,7 @@ const Chatbot = () => {
           {/* Header */}
           <div className="bg-primary text-white p-3 flex justify-between items-center">
             <div className="flex items-center">
-              <Robot size={20} className="mr-2" />
+              <Bot size={20} className="mr-2" />
               <h3 className="font-medium">GreenWise Assistant</h3>
             </div>
             <div className="flex space-x-1">
@@ -154,7 +154,7 @@ const Chatbot = () => {
                         "h-6 w-6 rounded-full flex items-center justify-center mr-2 text-white text-xs",
                         message.sender === 'user' ? "bg-blue-500" : "bg-primary"
                       )}>
-                        {message.sender === 'user' ? <User size={12} /> : <Robot size={12} />}
+                        {message.sender === 'user' ? <User size={12} /> : <Bot size={12} />}
                       </div>
                       <div>
                         <p className="text-sm font-medium">
@@ -170,7 +170,7 @@ const Chatbot = () => {
                 ))}
                 {isTyping && (
                   <div className="flex items-center space-x-2 text-gray-500 mb-4">
-                    <Robot size={16} />
+                    <Bot size={16} />
                     <div className="flex space-x-1">
                       <div className="h-2 w-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
                       <div className="h-2 w-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
